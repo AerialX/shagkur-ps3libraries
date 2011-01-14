@@ -15,7 +15,6 @@ mkdir build-ppu && cd build-ppu || { exit 1; }
 
 ## Configure the build.
 CFLAGS="-I$PS3DEV/host/ppu/include -DCAIRO_NO_MUTEX" \
-LDFLAGS="-L$PS3DEV/host/ppu/lib" \
 PKG_CONFIG_PATH="$PS3DEV/host/ppu/lib/pkgconfig" \
 ../configure --prefix="$PS3DEV/host/ppu" --host="ppu" --enable-fc="no" --enable-xlib="no" --disable-shared --disable-valgrind --enable-gobject="no" || { exit 1; }
 
